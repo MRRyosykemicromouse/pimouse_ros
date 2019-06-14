@@ -15,7 +15,6 @@ cd ./ros_setup_scripts_Ubuntu16.04_server
 bash ./step0.bash
 bash ./step1.bash
 
-sudo apt-get install ros-kinetic-tf ros-kinetic-tf2-geometry-msgs
 
 #catkin setup
 mkdir -p ~/catkin_ws/src
