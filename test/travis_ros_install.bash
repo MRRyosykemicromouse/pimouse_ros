@@ -9,12 +9,16 @@ sudo pip install pyyaml
 sudo pip install rospkg
 
 #ros install
-cd ..
-git clone https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu16.04_server.git
-cd ./ros_setup_scripts_Ubuntu16.04_server
-bash ./step0.bash
-bash ./step1.bash
 
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install ros-kinetic-desktop-full
+sudo rosdep init
+sudo rosdep update
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc 
+source ~/.bashrc
 
 #catkin setup
 mkdir -p ~/catkin_ws/src
