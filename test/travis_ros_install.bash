@@ -22,6 +22,6 @@ mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 #source /opt/ros/kinetic/setup.bash
 #source /opt/ros/devel/setup.bash
-catkin_init_workspace
+sudo  catkin_init_workspace
 cd ~/catkin_ws
-catkin_make
+sudo  catkin_make
