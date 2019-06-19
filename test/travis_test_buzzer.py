@@ -3,7 +3,7 @@
 import rospy, unittest, rostest, actionlib
 import rosnode
 import time
-from std_msgs.msg import UInt16
+from std_msgs.msg import UInt16t
 from raspimouse_ros_2.msg import MusicAction, MusicResult, MusicFeedback, MusicGoal #1行追加
 
 class BuzzerTest(unittest.TestCase):
