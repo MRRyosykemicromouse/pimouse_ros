@@ -30,10 +30,11 @@ def exec_music(goal):
  	    return
 
         write_freq(f)
-        rospy.sleep(1.0 if i >= len(goal.durations) else goal.duration[i])
+        rospy.sleep(1.0 if i >= len(goal.durations) else goal.durations[i])
 
     r.finished = True
     music.set_succeeded(r)
+
 
 if __name__=='__main__':
     rospy.init_node('buzzer')
